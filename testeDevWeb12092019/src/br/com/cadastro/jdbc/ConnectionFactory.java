@@ -6,7 +6,7 @@ public class ConnectionFactory {
 		
 		Class.forName("com.mysql.jdbc.Driver");
         try {
-        	return DriverManager.getConnection("jdbc:mysql://www.anln.co.mbr/anlncom_cadastro", "anlncom_cadastro", "anlncom_cadastro123456");
+        	return DriverManager.getConnection("jdbc:mysql://localhost:3306/projeto", "root", "");
         }catch(SQLException e){
         	System.out.println("Erro de conexao");
 			throw new RuntimeException(e+"\nNAO FOI POSSIVEL CONECTAR NO BANCO DE DADOS");
