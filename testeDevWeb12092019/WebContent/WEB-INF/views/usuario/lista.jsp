@@ -31,7 +31,7 @@
 				<td>${usuario.login}</td>
 				<td><fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
 				<td>${usuario.altura}</td>
-				<td><a href="mostraUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
+				<td><a href="editaUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
 				<td><a href="removeUsuario?id=${usuario.id}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
