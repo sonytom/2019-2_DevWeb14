@@ -29,8 +29,8 @@
       
       <bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
           <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-       		<property name="url" value="jdbc:mysql://localhost:3306/projeto"/>
-       		<property name="username" value="root"/>
-          <property name="password" value=""/>
+       		<property name="url" value="jdbc:mysql://184.107.94.187/2019-2_DevWeb14"/>
+       		<property name="username" value="2019-2_DevWeb14"/>
+          <property name="password" value="2019-2_DevWeb14"/>
          </bean>
 </beans>

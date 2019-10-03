@@ -16,11 +16,11 @@ import org.springframework.stereotype.Repository;
 import br.com.cadastro.model.Usuario;
 
 @Repository
-public class UsuarioDAO {
+public class CadastroDAO {
 	Connection connection;
 	
 	@Autowired
-	public UsuarioDAO(DataSource dataSource) throws ClassNotFoundException{
+	public CadastroDAO(DataSource dataSource) throws ClassNotFoundException{
 		try {
             this.connection = dataSource.getConnection();
         } catch (SQLException e) {
@@ -45,7 +45,7 @@ public class UsuarioDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			//stmt.setFloat(5, usuario.getAltura());
+			stmt.setFloat(5, usuario.getAltura());
 			stmt.execute();
 			stmt.close();
 		}catch (SQLException e){

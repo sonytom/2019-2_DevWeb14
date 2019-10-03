@@ -18,7 +18,40 @@ public class Usuario {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataNascimento;
 	@NotNull(message="Campo em Branco")
-	private float altura;
+	private String CPF;
+	@Size(min=1 , message="Preencher Campo")
+	private String TelContato;
+	@Size(min=1 , message="Preencher Campo")
+	private String Endereco;	
+	@Size(min=1 , message="Preencher Campo")
+	private String RG;
+	@Size(min=1 , message="Preencher Campo")
+	
+	public String getRG() {
+		return RG;
+	}
+	public void setRG(String rG) {
+		RG = rG;
+	}
+	public String getCPF() {
+		return CPF;
+	}
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+	public String getTelContato() {
+		return TelContato;
+	}
+	public void setTelContato(String telContato) {
+		TelContato = telContato;
+	}
+	public String getEndereco() {
+		return Endereco;
+	}
+	public void setEndereco(String endereco) {
+		Endereco = endereco;
+	}
+	
 	
 	public String getLogin() {
 		return login;
@@ -50,11 +83,6 @@ public class Usuario {
 	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public float getAltura() {
-		return altura;
-	}
-	public void setAltura(float altura) {
-		this.altura = altura;
-	}
+	
 
 }
