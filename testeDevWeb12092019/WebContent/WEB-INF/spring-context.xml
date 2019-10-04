@@ -24,7 +24,7 @@
           class="br.com.cadastro.interceptor.AutorizadorInterceptor" />
       </mvc:interceptors>
       
-      <mvc:annotation-driven/>
+      <mvc:annotation-driven></mvc:annotation-driven>
 		<mvc:resources mapping="/resources/**" location="resources/"/>
       
       <bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">

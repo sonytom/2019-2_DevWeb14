@@ -43,34 +43,9 @@ public class ProdutoDAO {
 			stmt.setLong(3, produto.getIddistribuidora());
 			stmt.setString(4, produto.getNome());
 			stmt.setFloat(5, produto.getDosagem());
-			
-			if(produto.getDtinclusao() != null)
-			{
-				stmt.setDate(6, new java.sql.Date(produto.getDtinclusao().getTimeInMillis()));
-			}
-			else
-			{
-				stmt.setDate(6, null);
-			}
-			
-			if(produto.getDtfabricacao() != null)
-			{
-				stmt.setDate(7, new java.sql.Date(produto.getDtfabricacao().getTimeInMillis()));
-			}
-			else
-			{
-				stmt.setDate(7, null);
-			}
-			
-			if(produto.getDtvalidade() != null)
-			{
-				stmt.setDate(8, new java.sql.Date(produto.getDtvalidade().getTimeInMillis()));
-			}
-			else
-			{
-				stmt.setDate(8, null);
-			}
-			
+			stmt.setString(6, produto.getDtinclusao());
+			stmt.setString(7, produto.getDtfabricacao());
+			stmt.setString(8, produto.getDtvalidade());
 			stmt.setString(9, produto.getLote());
 			stmt.setFloat(10, produto.getPrecolot());
 			stmt.setFloat(11, produto.getQtdLote());
@@ -99,27 +74,9 @@ public class ProdutoDAO {
 				produto.setIddistribuidora(rs.getLong("iddistribuidora"));
 				produto.setNome(rs.getString("nome"));
 				produto.setDosagem(rs.getFloat("dosagem"));
-				
-				if(rs.getDate("dtinclusao") != null){
-					Calendar dtinclusao = Calendar.getInstance();
-					dtinclusao.setTime(rs.getDate("dtinclusao"));
-			produto.setDtinclusao(dtinclusao);
-				}
-				
-				if(rs.getDate("dtfabricacao") != null){
-					Calendar dtfabricacao = Calendar.getInstance();
-					dtfabricacao.setTime(rs.getDate("dtfabricacao"));
-			produto.setDtfabricacao(dtfabricacao);
-				}
-				
-				if(rs.getDate("dtvalidade") != null){
-					Calendar dtvalidade = Calendar.getInstance();
-					dtvalidade.setTime(rs.getDate("dtvalidade"));
-			produto.setDtvalidade(dtvalidade);
-				}
-				
-				
-				
+				produto.setDtinclusao(rs.getString("dtinclusao"));
+				produto.setDtfabricacao(rs.getString("dtfabricacao"));
+				produto.setDtvalidade(rs.getString("dtvalidade"));
 				produto.setLote(rs.getString("lote"));
 				produto.setPrecolot(rs.getFloat("precolot"));
 				produto.setQtdLote(rs.getFloat("qtdLote"));
@@ -172,38 +129,21 @@ public class ProdutoDAO {
 					
 					
 					Produto produto = new Produto();
-
+					
+					
 					produto.setIdproduto(rs.getLong("idproduto"));
 					produto.setIdfabricante(rs.getLong("idfabricante"));
 					produto.setIddistribuidora(rs.getLong("iddistribuidora"));
 					produto.setNome(rs.getString("nome"));
 					produto.setDosagem(rs.getFloat("dosagem"));
-					
-					if(rs.getDate("dtinclusao") != null){
-						Calendar dtinclusao = Calendar.getInstance();
-						dtinclusao.setTime(rs.getDate("dtinclusao"));
-				produto.setDtinclusao(dtinclusao);
-					}
-					
-					if(rs.getDate("dtfabricacao") != null){
-						Calendar dtfabricacao = Calendar.getInstance();
-						dtfabricacao.setTime(rs.getDate("dtfabricacao"));
-				produto.setDtfabricacao(dtfabricacao);
-					}
-					
-					if(rs.getDate("dtvalidade") != null){
-						Calendar dtvalidade = Calendar.getInstance();
-						dtvalidade.setTime(rs.getDate("dtvalidade"));
-				produto.setDtvalidade(dtvalidade);
-					}
-					
-					
-					
+					produto.setDtinclusao(rs.getString("dtinclusao"));
+					produto.setDtfabricacao(rs.getString("dtfabricacao"));
+					produto.setDtvalidade(rs.getString("dtvalidade"));
 					produto.setLote(rs.getString("lote"));
 					produto.setPrecolot(rs.getFloat("precolot"));
 					produto.setQtdLote(rs.getFloat("qtdLote"));
 					produto.setPrecoqtd(rs.getFloat("precoqtd"));
-		
+
 			
 					
 					return produto;
@@ -227,34 +167,9 @@ public class ProdutoDAO {
 			stmt.setLong(3, produto.getIddistribuidora());
 			stmt.setString(4, produto.getNome());
 			stmt.setFloat(5, produto.getDosagem());
-			
-			if(produto.getDtinclusao() != null)
-			{
-				stmt.setDate(6, new java.sql.Date(produto.getDtinclusao().getTimeInMillis()));
-			}
-			else
-			{
-				stmt.setDate(6, null);
-			}
-			
-			if(produto.getDtfabricacao() != null)
-			{
-				stmt.setDate(7, new java.sql.Date(produto.getDtfabricacao().getTimeInMillis()));
-			}
-			else
-			{
-				stmt.setDate(7, null);
-			}
-			
-			if(produto.getDtvalidade() != null)
-			{
-				stmt.setDate(8, new java.sql.Date(produto.getDtvalidade().getTimeInMillis()));
-			}
-			else
-			{
-				stmt.setDate(8, null);
-			}
-			
+			stmt.setString(6, produto.getDtinclusao());
+			stmt.setString(7, produto.getDtfabricacao());
+			stmt.setString(8, produto.getDtvalidade());
 			stmt.setString(9, produto.getLote());
 			stmt.setFloat(10, produto.getPrecolot());
 			stmt.setFloat(11, produto.getQtdLote());

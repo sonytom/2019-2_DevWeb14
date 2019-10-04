@@ -17,22 +17,18 @@
 	<br/>
 	<table>
 		<tr>
-			<th>Id</th>
+			
 			<th>Nome</th>
 			<th>Login</th>
-			<th>Data de Nascimento</th>
-			<th>Altura</th>
+		
+			
 			<th></th>
 		</tr>
-		<c:forEach items="${usuarios}" var="usuario">
+		<c:forEach items="${produtos}" var="produto">
 			<tr>
-				<td>${usuario.id}</td>
+				
 				<td>${usuario.nome}</td>
-				<td>${usuario.login}</td>
-				<td><fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
-				<td>${usuario.altura}</td>
-				<td><a href="mostraUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
-				<td><a href="removeUsuario?id=${usuario.id}" title="Excluir">Excluir</a></td>
+				
 			</tr>
 		</c:forEach>
 	</table>
