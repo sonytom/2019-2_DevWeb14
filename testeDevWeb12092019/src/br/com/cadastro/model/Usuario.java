@@ -27,6 +27,7 @@ public class Usuario {
 	private String RG;
 	@Size(min=1 , message="Preencher Campo")
 	
+	
 	public String getRG() {
 		return RG;
 	}

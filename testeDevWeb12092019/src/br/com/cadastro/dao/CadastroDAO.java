@@ -45,7 +45,10 @@ public class CadastroDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			//stmt.setFloat(5, usuario.getAltura());
+			stmt.setString(5, usuario.getRG());
+			stmt.setString(6, usuario.getCPF());
+			stmt.setString(7, usuario.getTelContato());
+			stmt.setString(8, usuario.getEndereco());
 			stmt.execute();
 			stmt.close();
 		}catch (SQLException e){
@@ -124,7 +127,6 @@ public class CadastroDAO {
 						dataNascimento.setTime(rs.getDate("dataNascimento"));
 						usuario.setDataNascimento(dataNascimento);
 					}
-					//usuario.setAltura(rs.getFloat("altura"));
 					usuario.setLogin(rs.getString("RG"));
 					usuario.setLogin(rs.getString("CPF"));
 					usuario.setLogin(rs.getString("TelContato"));
@@ -155,8 +157,7 @@ public class CadastroDAO {
 			else
 			{
 				stmt.setDate(4, null);
-			}
-			//stmt.setFloat(5, usuario.getAltura());
+			}			
 			stmt.setString(5, usuario.getRG());
 			stmt.setString(6, usuario.getCPF());
 			stmt.setString(7, usuario.getTelContato());
