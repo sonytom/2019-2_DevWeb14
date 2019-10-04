@@ -17,7 +17,7 @@ public class CadastroUsuario {
 	private String CPF;		
 	private String TelContato;
 	private String Endereco;
-	private String descricao;
+	
 	
 	public Long getId() {
 		return id;
@@ -43,12 +43,7 @@ public class CadastroUsuario {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+	
 	public long getIdCadastroUsuario() {
 		return idCadastroUsuario;
 	}
