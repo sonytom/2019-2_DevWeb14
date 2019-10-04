@@ -17,7 +17,15 @@
 	
 	<form action="adicionaProduto" method="post">
 	
-	            <label for="Idproduto">idproduto</label>   
+	            <label for="Idproduto">idproduto</label> 
+	            
+	            <!--
+                       name="idproduto" = reqmaping
+                       
+                       value="${produto.idproduto}" >
+				<form:errors path="produto.idproduto" igual a classe
+                          
+-->  
 				<input type="text" name="idproduto" value="${produto.idproduto}" >
 				<form:errors path="produto.idproduto" cssStyle="color:#B71C1C"/><br />
 	
