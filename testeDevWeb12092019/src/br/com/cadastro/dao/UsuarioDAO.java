@@ -29,8 +29,8 @@ public class UsuarioDAO {
 	}
 	
 	public void adiciona(Usuario usuario){
-		String sql = "insert into usuarios (nome, login , senha, dataNascimento, altura) " +
-					"values (?, ?, MD5(?), ?, ?)";
+		String sql = "insert into usuarios (nome, login , senha, dataNascimento, RG, CPF, TelContato, Endereco) " +
+					"values (?, ?, MD5(?), ?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -45,7 +45,10 @@ public class UsuarioDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			//stmt.setFloat(5, usuario.getAltura());
+			stmt.setString(5, usuario.getRG());
+			stmt.setString(6, usuario.getCPF());
+			stmt.setString(7, usuario.getTelContato());
+			stmt.setString(8, usuario.getEndereco());
 			stmt.execute();
 			stmt.close();
 		}catch (SQLException e){
@@ -72,7 +75,10 @@ public class UsuarioDAO {
 					dataNascimento.setTime(rs.getDate("dataNascimento"));
 					usuario.setDataNascimento(dataNascimento);
 				}
-				//usuario.setAltura(rs.getFloat("altura"));
+				usuario.setRG(rs.getString("RG"));
+				usuario.setCPF(rs.getString("CPF"));
+				usuario.setTelContato(rs.getString("TelContato"));
+				usuario.setEndereco(rs.getString("Endereco"));
 				usuarios.add(usuario);
 			}
 			rs.close();
@@ -120,7 +126,10 @@ public class UsuarioDAO {
 						dataNascimento.setTime(rs.getDate("dataNascimento"));
 						usuario.setDataNascimento(dataNascimento);
 					}
-					//usuario.setAltura(rs.getFloat("altura"));
+					usuario.setRG(rs.getString("RG"));
+					usuario.setCPF(rs.getString("CPF"));
+					usuario.setTelContato(rs.getString("TelContato"));
+					usuario.setEndereco(rs.getString("Endereco"));
 					
 					return usuario;
 				}
@@ -133,7 +142,7 @@ public class UsuarioDAO {
 	
 	
 	public void altera(Usuario usuario){
-		String sql = "update usuarios set nome=? , login=?, senha=MD5(?), dataNascimento=?, altura=? where id=?";
+		String sql = "update usuarios set nome=? , login=?, senha=MD5(?), dataNascimento=?, RG=? , CPF=?, TelContato=?, Endereco=? where id=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -149,8 +158,11 @@ public class UsuarioDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			//stmt.setFloat(5, usuario.getAltura());
-			stmt.setLong(6, usuario.getId());
+			stmt.setString(5, usuario.getRG());
+			stmt.setString(6, usuario.getCPF());
+			stmt.setString(7, usuario.getTelContato());
+			stmt.setString(8, usuario.getEndereco());
+			stmt.setLong(9, usuario.getId());
 				
 			stmt.execute();
 			stmt.close();
