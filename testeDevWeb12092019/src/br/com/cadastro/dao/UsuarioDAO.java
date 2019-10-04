@@ -72,7 +72,7 @@ public class UsuarioDAO {
 					dataNascimento.setTime(rs.getDate("dataNascimento"));
 					usuario.setDataNascimento(dataNascimento);
 				}
-				usuario.setAltura(rs.getFloat("altura"));
+				//usuario.setAltura(rs.getFloat("altura"));
 				usuarios.add(usuario);
 			}
 			rs.close();
@@ -120,7 +120,7 @@ public class UsuarioDAO {
 						dataNascimento.setTime(rs.getDate("dataNascimento"));
 						usuario.setDataNascimento(dataNascimento);
 					}
-					usuario.setAltura(rs.getFloat("altura"));
+					//usuario.setAltura(rs.getFloat("altura"));
 					
 					return usuario;
 				}
@@ -149,7 +149,7 @@ public class UsuarioDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			stmt.setFloat(5, usuario.getAltura());
+			//stmt.setFloat(5, usuario.getAltura());
 			stmt.setLong(6, usuario.getId());
 				
 			stmt.execute();
