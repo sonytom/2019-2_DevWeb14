@@ -19,7 +19,7 @@
 		<tr>
 			
 			<th>Nome</th>
-			<th>Login</th>
+			
 		
 			
 			<th></th>
