@@ -8,6 +8,7 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Usuario {
+	
 	private Long id;
 	@Size(min=1 , message="Preencher Campo")
 	private String login;
@@ -18,42 +19,21 @@ public class Usuario {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataNascimento;
 	@NotNull(message="Campo em Branco")
-	private String CPF;
+	private String cpf;
 	@Size(min=1 , message="Preencher Campo")
-	private String TelContato;
+	private String telContato;
 	@Size(min=1 , message="Preencher Campo")
-	private String Endereco;	
+	private String endereco;	
 	@Size(min=1 , message="Preencher Campo")
-	private String RG;
-	@Size(min=1 , message="Preencher Campo")
+	private String rg;
 	
 	
-	public String getRG() {
-		return RG;
+	public Long getId() {
+		return id;
 	}
-	public void setRG(String rG) {
-		RG = rG;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public String getCPF() {
-		return CPF;
-	}
-	public void setCPF(String cPF) {
-		CPF = cPF;
-	}
-	public String getTelContato() {
-		return TelContato;
-	}
-	public void setTelContato(String telContato) {
-		TelContato = telContato;
-	}
-	public String getEndereco() {
-		return Endereco;
-	}
-	public void setEndereco(String endereco) {
-		Endereco = endereco;
-	}
-	
-	
 	public String getLogin() {
 		return login;
 	}
@@ -65,12 +45,6 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
 	}
 	public String getNome() {
 		return nome;
@@ -84,6 +58,35 @@ public class Usuario {
 	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getTelContato() {
+		return telContato;
+	}
+	public void setTelContato(String telContato) {
+		this.telContato = telContato;
+	}
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	
+	
+	public String getRg() {
+		return rg;
+	}
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	
+	
 	
 
 }

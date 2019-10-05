@@ -30,7 +30,7 @@ public class UsuarioController {
 	
 	@RequestMapping("adicionaUsuario")
 	public String adiciona(@Valid Usuario usuario, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("nome") || result.hasFieldErrors("login") || result.hasFieldErrors("senha") || result.hasFieldErrors("dataNascimento") || result.hasFieldErrors("RG")|| result.hasFieldErrors("CPF")|| result.hasFieldErrors("TelContato")|| result.hasFieldErrors("Endereco") ) {
+		if(result.hasFieldErrors("nome") || result.hasFieldErrors("login") || result.hasFieldErrors("senha") || result.hasFieldErrors("dataNascimento") || result.hasFieldErrors("Rg")|| result.hasFieldErrors("Cpf")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("endereco") ) {
 			 return "usuario/insere";
 	     }
 		daoUsuario.adiciona(usuario);
@@ -45,7 +45,7 @@ public class UsuarioController {
 	
 	@RequestMapping("alteraUsuario")
 	public String altera(@Valid Usuario usuario, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("nome") || result.hasFieldErrors("login") || result.hasFieldErrors("senha") || result.hasFieldErrors("dataNascimento") || result.hasFieldErrors("RG")|| result.hasFieldErrors("CPF")|| result.hasFieldErrors("TelContato")|| result.hasFieldErrors("Endereco")) {
+		if(result.hasFieldErrors("nome") || result.hasFieldErrors("login") || result.hasFieldErrors("senha") || result.hasFieldErrors("dataNascimento") || result.hasFieldErrors("Rg")|| result.hasFieldErrors("Cpf")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("endereco")) {
 			 return "usuario/edita";
 	     }
 		daoUsuario.altera(usuario);

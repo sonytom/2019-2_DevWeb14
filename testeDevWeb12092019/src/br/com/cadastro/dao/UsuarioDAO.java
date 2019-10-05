@@ -29,7 +29,7 @@ public class UsuarioDAO {
 	}
 	
 	public void adiciona(Usuario usuario){
-		String sql = "insert into usuarios (nome, login , senha, dataNascimento, RG, CPF, TelContato, Endereco) " +
+		String sql = "insert into usuarios (nome, login , senha, dataNascimento, rg, cpf, telContato, endereco) " +
 					"values (?, ?, MD5(?), ?, ?, ?, ?, ?)";
 		
 		try{
@@ -45,8 +45,8 @@ public class UsuarioDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			stmt.setString(5, usuario.getRG());
-			stmt.setString(6, usuario.getCPF());
+			stmt.setString(5, usuario.getRg());
+			stmt.setString(6, usuario.getCpf());
 			stmt.setString(7, usuario.getTelContato());
 			stmt.setString(8, usuario.getEndereco());
 			stmt.execute();
@@ -75,10 +75,10 @@ public class UsuarioDAO {
 					dataNascimento.setTime(rs.getDate("dataNascimento"));
 					usuario.setDataNascimento(dataNascimento);
 				}
-				usuario.setRG(rs.getString("RG"));
-				usuario.setCPF(rs.getString("CPF"));
-				usuario.setTelContato(rs.getString("TelContato"));
-				usuario.setEndereco(rs.getString("Endereco"));
+				usuario.setRg(rs.getString("rg"));
+				usuario.setCpf(rs.getString("cpf"));
+				usuario.setTelContato(rs.getString("telContato"));
+				usuario.setEndereco(rs.getString("endereco"));
 				usuarios.add(usuario);
 			}
 			rs.close();
@@ -126,10 +126,10 @@ public class UsuarioDAO {
 						dataNascimento.setTime(rs.getDate("dataNascimento"));
 						usuario.setDataNascimento(dataNascimento);
 					}
-					usuario.setRG(rs.getString("RG"));
-					usuario.setCPF(rs.getString("CPF"));
-					usuario.setTelContato(rs.getString("TelContato"));
-					usuario.setEndereco(rs.getString("Endereco"));
+					usuario.setRg(rs.getString("RG"));
+					usuario.setCpf(rs.getString("CPF"));
+					usuario.setTelContato(rs.getString("telContato"));
+					usuario.setEndereco(rs.getString("endereco"));
 					
 					return usuario;
 				}
@@ -142,7 +142,7 @@ public class UsuarioDAO {
 	
 	
 	public void altera(Usuario usuario){
-		String sql = "update usuarios set nome=? , login=?, senha=MD5(?), dataNascimento=?, RG=? , CPF=?, TelContato=?, Endereco=? where id=?";
+		String sql = "update usuarios set nome=? , login=?, senha=MD5(?), dataNascimento=?, RG=? , CPF=?, telContato=?, endereco=? where id=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -158,8 +158,8 @@ public class UsuarioDAO {
 			{
 				stmt.setDate(4, null);
 			}
-			stmt.setString(5, usuario.getRG());
-			stmt.setString(6, usuario.getCPF());
+			stmt.setString(5, usuario.getRg());
+			stmt.setString(6, usuario.getCpf());
 			stmt.setString(7, usuario.getTelContato());
 			stmt.setString(8, usuario.getEndereco());
 			stmt.setLong(9, usuario.getId());
