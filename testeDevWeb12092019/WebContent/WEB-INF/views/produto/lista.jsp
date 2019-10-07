@@ -11,39 +11,45 @@
 <body>
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
-	<a href="novoUsuario">Cadastrar novo usuario</a>
 	<a href="novoProduto">Cadastrar novo produto</a>
 	<br/>
 	<br/>
-	<table>
-		<tr>
-			
-			<th>Nome</th>
-			
-		
-			
-			<th></th>
-		</tr>
-		<c:forEach items="${produtos}" var="produto">
-			<tr>
-				
-				<td>${usuario.nome}</td>
-				
-			</tr>
-		</c:forEach>
-	</table>
+
 	
 	<table>
 		<tr>
 			<th>Idproduto</th>
+			<th>idfabricante</th>
+			<th>iddistribuidora</th>
 			<th>Nome</th>
-			<th></th>
+			<th>dosagem</th>
+			<th>dtinclusao</th>
+			<th>dtfabricacao</th>
+			<th>dtvalidade</th>
+			<th>lote</th>
+			<th>precolot</th>
+			<th>qtdLote</th>
+			<th>precoqtd</th>
+			
+			
+			
 		</tr>
 		<c:forEach items="${produtos}" var="produto">
 			<tr>
 				<td>${produto.idproduto}</td>
+				<td>${produto.idfabricante}</td>
+				<td>${produto.iddistribuidora}</td>
 				<td>${produto.nome}</td>
-				<td><a href="mostraProduto?id=${produto.idproduto}" title="Editar">Editar</a></td>
+				<td>${produto.dosagem}</td>
+				<td>${produto.dtinclusao}</td>
+				<td>${produto.dtfabricacao}</td>
+				<td>${produto.dtvalidade}</td>
+				<td>${produto.lote}</td>
+				<td>${produto.precolot}</td>
+				<td>${produto.qtdLote}</td>
+				<td>${produto.precoqtd}</td>
+				
+				<td><a href="editaProduto?id=${produto.idproduto}" title="Editar">Editar</a></td>
 				<td><a href="removeProduto?id=${produto.idproduto}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>

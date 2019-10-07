@@ -57,6 +57,8 @@ public class ProdutoController {
 		    return "redirect:listaProdutos";
            }
 	
+	
+	
 	 @RequestMapping("removeProduto")
       public String remove(Produto produto) throws ClassNotFoundException {
      	daoProdutos.remove(produto);

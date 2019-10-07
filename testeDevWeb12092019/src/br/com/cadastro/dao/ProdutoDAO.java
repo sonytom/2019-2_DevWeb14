@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -14,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import br.com.cadastro.model.Produto;
+import br.com.cadastro.model.Usuario;
 
 
 @Repository
@@ -101,7 +101,7 @@ public class ProdutoDAO {
 	public void remove(Produto produto){
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement
-			("delete from produtos where idproduto = ?");
+			("delete from produtos where id = ?");
 			
 			stmt.setLong(1, produto.getIdproduto());
 			stmt.execute();
@@ -143,8 +143,7 @@ public class ProdutoDAO {
 					produto.setPrecolot(rs.getFloat("precolot"));
 					produto.setQtdLote(rs.getFloat("qtdLote"));
 					produto.setPrecoqtd(rs.getFloat("precoqtd"));
-
-			
+					
 					
 					return produto;
 				}

@@ -10,19 +10,21 @@
 <title>Sistema Cadastro</title>
 </head>
 <body>
-<c:import url="/WEB-INF/views/principal/menu.jsp"/>
-<br />
+	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
+	<br />
+	Alterar usuario: ${produto.idproduto}	
+	<br />
+	<br />
 	
-	Cadastro de Usuarios <br /><br />
+	<form action="alteraProduto" method="post" class="form-horizontal">
 	
-	<form action="adicionaProduto" method="post">
 	
-				<label for="Idproduto">Idproduto</label>  
-				<input type="text" name="idproduto" value="${produto.idproduto}" >
+<label for="Idproduto">Idproduto</label>  
+
+								<input type="text" name="idproduto" value="${produto.idproduto}" >
 				<form:errors path="produto.idproduto" cssStyle="color:#B71C1C"/><br />
-	          
-				
-				
+	            
+							
 				<label for="Idfabricante">idfabricante</label>  
 				<input type="text" name="idfabricante" value="${produto.idfabricante}" >
 				<form:errors path="produto.idfabricante" cssStyle="color:#B71C1C"/><br />
@@ -34,10 +36,6 @@
 				<label for="Nome">nome</label>  
 				<input type="text" name="nome" value="${produto.nome}" >
 				<form:errors path="produto.nome" cssStyle="color:#B71C1C"/><br />
-				
-				<label for="Dosagem">Dosagem</label>  
-				<input type="text" name="dosagem" value="${produto.dosagem}" >
-				<form:errors path="produto.dosagem" cssStyle="color:#B71C1C"/><br />
 						
 				<label for="Dtinclusao">dtinclusao</label>  
 				<input type="text" name="dtinclusao" value ="<fmt:formatDate value="${dtinclusao}" pattern="dd/MM/yyyy" />">
@@ -67,10 +65,13 @@
 				<input type="text" name="precoqtd" value="${produto.precoqtd}" >
 				<form:errors path="produto.precoqtd" cssStyle="color:#B71C1C"/><br />
 				
-							
-				
-				<input type="submit" value="Criar">
-		
+	
+	
+	
+	
+	<input type="submit" value="Alterar">
+	
 	</form>
+	
 </body>
 </html>

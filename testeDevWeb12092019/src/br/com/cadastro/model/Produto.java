@@ -14,6 +14,7 @@ public class Produto {
 	private Long idproduto;
 	private Long idfabricante;
 	private Long iddistribuidora;
+	@Size(min=1 , message="Preencher Campo")
 	private String nome;
 	private float  dosagem;
 	private String dtinclusao;
