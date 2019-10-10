@@ -8,6 +8,7 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Usuario {
+	
 	private Long id;
 	@Size(min=1 , message="Preencher Campo")
 	private String login;
@@ -18,8 +19,21 @@ public class Usuario {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Calendar dataNascimento;
 	@NotNull(message="Campo em Branco")
-	private float altura;
+	private String cpf;
+	@Size(min=1 , message="Preencher Campo")
+	private String telContato;
+	@Size(min=1 , message="Preencher Campo")
+	private String endereco;	
+	@Size(min=1 , message="Preencher Campo")
+	private String rg;
 	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getLogin() {
 		return login;
 	}
@@ -31,12 +45,6 @@ public class Usuario {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
 	}
 	public String getNome() {
 		return nome;
@@ -50,11 +58,35 @@ public class Usuario {
 	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public float getAltura() {
-		return altura;
+	public String getCpf() {
+		return cpf;
 	}
-	public void setAltura(float altura) {
-		this.altura = altura;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
+	public String getTelContato() {
+		return telContato;
+	}
+	public void setTelContato(String telContato) {
+		this.telContato = telContato;
+	}
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	
+	
+	public String getRg() {
+		return rg;
+	}
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	
+	
+	
 
 }

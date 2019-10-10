@@ -20,7 +20,10 @@
 			<th>Nome</th>
 			<th>Login</th>
 			<th>Data de Nascimento</th>
-			<th>Altura</th>
+			<th>RG</th>
+			<th>CPF</th>
+			<th>TelContato</th>
+			<th>Endereço</th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -30,7 +33,10 @@
 				<td>${usuario.nome}</td>
 				<td>${usuario.login}</td>
 				<td><fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
-				<td>${usuario.altura}</td>
+				<td>${usuario.rg}</td>
+				<td>${usuario.cpf}</td>
+				<td>${usuario.telContato}</td>
+				<td>${usuario.endereco}</td>
 				<td><a href="editaUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
 				<td><a href="removeUsuario?id=${usuario.id}" title="Excluir">Excluir</a></td>
 			</tr>
