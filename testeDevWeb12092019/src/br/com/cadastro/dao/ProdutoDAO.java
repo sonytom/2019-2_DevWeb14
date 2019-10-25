@@ -34,10 +34,9 @@ public class ProdutoDAO {
 					"values (?,?, ?, ? , ?, ?, ? , ?, ? , ? , ?,?)";
 		
 
-	
-		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
+			
 			stmt.setLong(1, produto.getIdproduto());
 			stmt.setLong(2, produto.getIdfabricante());
 			stmt.setLong(3, produto.getIddistribuidora());
@@ -101,7 +100,9 @@ public class ProdutoDAO {
 	public void remove(Produto produto){
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement
-			("delete from produtos where id = ?");
+			("delete from produtos where idProduto = ?");
+			
+			
 			
 			stmt.setLong(1, produto.getIdproduto());
 			stmt.execute();
@@ -123,7 +124,8 @@ public class ProdutoDAO {
 			while(rs.next())
 			{
 
-				if(idproduto == rs.getLong("idproduto"))
+				if(idproduto == rs.getLong("idProduto"))
+					
 				{
 					
 					
@@ -131,7 +133,7 @@ public class ProdutoDAO {
 					Produto produto = new Produto();
 					
 					
-					produto.setIdproduto(rs.getLong("idproduto"));
+					produto.setIdproduto(rs.getLong("idProduto"));
 					produto.setIdfabricante(rs.getLong("idfabricante"));
 					produto.setIddistribuidora(rs.getLong("iddistribuidora"));
 					produto.setNome(rs.getString("nome"));
@@ -145,7 +147,11 @@ public class ProdutoDAO {
 					produto.setPrecoqtd(rs.getFloat("precoqtd"));
 					
 					
+					
+					System.out.println("TESTE = "+produto.getIdproduto() );
+					
 					return produto;
+					
 				}
 			}
 				return null;
@@ -156,10 +162,12 @@ public class ProdutoDAO {
 	
 	
 	public void altera(Produto produto){
-		String sql = "update produto set idproduto=? , idfabricante=?, iddistribuidora=?,nome=?, dosagem=?, dtinclusao=?,dtfabricacao=?,dtvalidade=?,lote=?,precolot=?,qtdLote=?,precoqtd=? where id=?";
+		String sql = "update produtos set idproduto=?,idfabricante=?,iddistribuidora=? ,nome=?,dosagem=? , dtinclusao=? ,dtfabricacao=? ,dtvalidade=? ,lote=?,precolot=?,qtdLote=?,precoqtd=? where idProduto=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
+			
+			
 			
 			stmt.setLong(1, produto.getIdproduto());
 			stmt.setLong(2, produto.getIdfabricante());
@@ -173,8 +181,14 @@ public class ProdutoDAO {
 			stmt.setFloat(10, produto.getPrecolot());
 			stmt.setFloat(11, produto.getQtdLote());
 			stmt.setFloat(12, produto.getPrecoqtd());
+			stmt.setLong(13, produto.getIdproduto());
 			stmt.execute();
+			System.out.println("TESTE = "+produto.getIdproduto() );
 			stmt.close();
+			
+			
+			
+			
 			
 		}catch(SQLException e){
 			throw new RuntimeException(e);

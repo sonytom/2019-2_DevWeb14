@@ -19,9 +19,8 @@
 	<form action="alteraProduto" method="post" class="form-horizontal">
 	
 	
-<label for="Idproduto">Idproduto</label>  
-
-								<input type="text" name="idproduto" value="${produto.idproduto}" >
+				<label for="Idproduto">Idproduto</label>  
+				<input type="text" name="idproduto" value="${produto.idproduto}" >
 				<form:errors path="produto.idproduto" cssStyle="color:#B71C1C"/><br />
 	            
 							
@@ -36,6 +35,10 @@
 				<label for="Nome">nome</label>  
 				<input type="text" name="nome" value="${produto.nome}" >
 				<form:errors path="produto.nome" cssStyle="color:#B71C1C"/><br />
+				
+				<label for="Dosagem">Dosagem</label>  
+				<input type="text" name="dosagem" value="${produto.dosagem}" >
+				<form:errors path="produto.dosagem" cssStyle="color:#B71C1C"/><br />
 						
 				<label for="Dtinclusao">dtinclusao</label>  
 				<input type="text" name="dtinclusao" value ="<fmt:formatDate value="${dtinclusao}" pattern="dd/MM/yyyy" />">
