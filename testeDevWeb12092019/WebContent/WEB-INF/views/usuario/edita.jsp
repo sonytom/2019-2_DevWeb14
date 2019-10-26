@@ -36,9 +36,22 @@
 	<input type="text" name="dataNascimento" value ="<fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" />" > 
 	<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/><br />
 	
-	<label for="Altura">Altura</label>  
-	<input type="text" name="altura" value="${usuario.altura}" >
-	<form:errors path="usuario.altura" cssStyle="color:#B71C1C"/><br />
+	<label for="RG">RG</label>  
+	<input type="text" name="Rg" value="${usuario.rg}" > 
+	<form:errors path="usuario.rg" cssStyle="color:#B71C1C"/><br />
+	
+	<label for="CPF">CPF</label>  
+	<input type="text" name="Cpf" value="${usuario.cpf}" > 
+	<form:errors path="usuario.cpf" cssStyle="color:#B71C1C"/><br />
+	
+	<label for="TelContato">TelContato</label>  
+	<input type="text" name="TelContato" value="${usuario.telContato}" > 
+	<form:errors path="usuario.telContato" cssStyle="color:#B71C1C"/><br />
+	
+	<label for="Endereco">Endereco</label>  
+	<input type="text" name="Endereco" value="${usuario.endereco}" > 
+	<form:errors path="usuario.endereco" cssStyle="color:#B71C1C"/><br />
+	
 	
 	<input type="submit" value="Alterar">
 	
