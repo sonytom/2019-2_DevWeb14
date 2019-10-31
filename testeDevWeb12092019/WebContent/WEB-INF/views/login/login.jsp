@@ -3,31 +3,56 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
+<!--
+author: Boostraptheme
+author URL: https://boostraptheme.com
+License: Creative Commons Attribution 4.0 Unported
+License URL: https://creativecommons.org/licenses/by/4.0/
+-->
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
+
 <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+    <title>Bootstrap Admin Template </title>
+    <link rel="shortcut icon" href="/testeDevWeb12092019/resources/admin/img/favicon.ico">
+    
+    <!-- global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/admin/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/admin/css/font-icon-style.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/admin/css/style.default.css" id="theme-stylesheet">
 
-<title>Sistema Cadastro</title>
-
-<!-- Custom fonts for this template-->
-<link href="/testeDevWeb12092019/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-<!-- Custom styles for this template-->
-<link href="/testeDevWeb12092019/resources/css/sb-admin.css" rel="stylesheet">
-
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/admin/css/pages/login.css">
 </head>
-<body class="bg-dark">
-  <div class="container">
-    <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Login</div>
-      <div class="card-body">
-        <form action="efetuaLogin" method="post">
+
+<body> 
+
+<!--====================================================
+                        PAGE CONTENT
+======================================================--> 
+      <section class="hero-area">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 ">
+                <div class="contact-h-cont">
+                  <h3 class="text-center"><img src="/testeDevWeb12092019/resources/admin/img/logo.png" class="img-fluid" alt=""></h3><br>
+                  
+                  <form action="efetuaLogin" method="post">
 		
           <div class="form-group">
             <div class="form-label-group">
@@ -43,15 +68,17 @@
           </div>      
           	<input type="submit" value="Entrar" class="btn btn-primary btn-block">		  
         </form>
-      </div>
-    </div>
-  </div>
-
-<!-- Bootstrap core JavaScript-->
-<script src="/testeDevWeb12092019/resources/vendor/jquery/jquery.min.js"></script>
-<script src="WEB-INF/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="/testeDevWeb12092019/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+                  
+                </div>
+            </div>
+          </div>  
+        </div>
+      </section>
+      
+    <!--Global Javascript -->
+    <script src="/testeDevWeb12092019/resources/admin/js/jquery.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/tether.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/bootstrap.min.js"></script>
+</body>
 
 </html>
