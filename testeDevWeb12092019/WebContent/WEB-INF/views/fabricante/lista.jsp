@@ -11,28 +11,26 @@
 <body>
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
-	<a href="novoUsuario">Cadastrar novo fabricante</a>
+	<a href="novoFabricante">Cadastrar novo fabricante</a>
 	<br />
 	<br />
 	<table>
 		<tr>
 			<th>Id</th>
 			<th>Nome</th>
-			<th>Login</th>
-			<th>Data de Nascimento</th>
-			<th>Altura</th>
-			<th></th>
-			<th></th>
+			<th>CNPJ</th>
+			<th>TelContato</th>
+			<th>E-mail</th>
 		</tr>
-		<c:forEach items="${usuarios}" var="usuario">
+		<c:forEach items="${fabricantes}" var="fabricante">
 			<tr>
 				<td>${usuario.id}</td>
 				<td>${usuario.nome}</td>
-				<td>${usuario.login}</td>
-				<td><fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
-				<td>${usuario.altura}</td>
-				<td><a href="editaUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
-				<td><a href="removeUsuario?id=${usuario.id}" title="Excluir">Excluir</a></td>
+				<td>${usuario.cnpj}</td>
+				<td>${usuario.TelContato}</td>
+				<td>${usuario.e-mail}</td>
+				<td><a href="editafabricante?id=${fabricante.id}" title="Editar">Editar</a></td>
+				<td><a href="removefabricante?id=${fabricante.id}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>

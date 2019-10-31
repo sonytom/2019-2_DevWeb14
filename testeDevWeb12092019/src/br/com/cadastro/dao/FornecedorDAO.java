@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -13,9 +12,7 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import br.com.cadastro.model.Fabricante;
 import br.com.cadastro.model.Fornecedor;
-import br.com.cadastro.model.Usuario;
 
 @Repository
 public class FornecedorDAO {
@@ -39,7 +36,7 @@ public class FornecedorDAO {
 			stmt.setInt(1, fornecedor.getId());
 			stmt.setString(2, fornecedor.getNome());
 			stmt.setString(3, fornecedor.getCnpj());
-			stmt.setLong(3, fornecedor.getTelefone());
+			stmt.setLong(3, fornecedor.gettelContato());
 			stmt.setString(3, fornecedor.getEmail());
 			
 			
@@ -64,7 +61,7 @@ public class FornecedorDAO {
 				fornecedor.setId(rs.getInt("id"));
 				fornecedor.setNome(rs.getString("nome"));
 				fornecedor.setCnpj(rs.getString("CNPJ"));
-				fornecedor.setTelefone(rs.getLong("Telefone"));
+				fornecedor.settelContato(rs.getLong("Telefone"));
 				fornecedor.setEmail(rs.getString("E-mail"));
 				}
 				
@@ -109,7 +106,7 @@ public class FornecedorDAO {
 					fornecedor.setId(rs.getInt("id"));
 					fornecedor.setNome(rs.getString("nome"));
 					fornecedor.setCnpj(rs.getString("CNPJ"));
-					fornecedor.setTelefone(rs.getLong("Telefone"));
+					fornecedor.settelContato(rs.getLong("Telefone"));
 					fornecedor.setEmail(rs.getString("E-mail"));
 					
 					}
@@ -130,7 +127,7 @@ public class FornecedorDAO {
 			stmt.setInt(1, fornecedor.getId());
 			stmt.setString(2, fornecedor.getNome());
 			stmt.setString(3, fornecedor.getCnpj());
-			stmt.setLong(3, fornecedor.getTelefone());
+			stmt.setLong(3, fornecedor.gettelContato());
 			stmt.setString(3, fornecedor.getEmail());
 			
 				

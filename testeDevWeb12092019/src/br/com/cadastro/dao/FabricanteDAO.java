@@ -26,15 +26,15 @@ public class FabricanteDAO {
 	}
 	
 	public void adiciona(Fabricante fabricante){
-		String sql = "insert into fabricantes (id, nome , cnpj, telefone, e-mail) " +
-					"values (?, ?, MD5(?), ?, ?)";
+		String sql = "insert into fabricantes (id, nome , cnpj, TelContato, email) " +
+					"values (?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			stmt.setInt(1, fabricante.getId());
 			stmt.setString(2, fabricante.getNome());
 			stmt.setString(3, fabricante.getCnpj());
-			stmt.setLong(3, fabricante.getTelefone());
+			stmt.setLong(3, fabricante.getTelContato());
 			stmt.setString(3, fabricante.getEmail());
 			
 			
@@ -59,8 +59,8 @@ public class FabricanteDAO {
 				fabricante.setId(rs.getInt("id"));
 				fabricante.setNome(rs.getString("nome"));
 				fabricante.setCnpj(rs.getString("CNPJ"));
-				fabricante.setTelefone(rs.getLong("Telefone"));
-				fabricante.setEmail(rs.getString("E-mail"));
+				fabricante.setTelContato(rs.getLong("TelContato"));
+				fabricante.setEmail(rs.getString("Email"));
 				}
 				
 			
@@ -91,7 +91,7 @@ public class FabricanteDAO {
 	public Fabricante buscaPorId(int id){
 		
 		try{
-			PreparedStatement stmt = this.connection.prepareStatement("select * from usuarios");
+			PreparedStatement stmt = this.connection.prepareStatement("select * from fornecedor");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next())
@@ -104,8 +104,8 @@ public class FabricanteDAO {
 					fabricante.setId(rs.getInt("id"));
 					fabricante.setNome(rs.getString("nome"));
 					fabricante.setCnpj(rs.getString("CNPJ"));
-					fabricante.setTelefone(rs.getLong("Telefone"));
-					fabricante.setEmail(rs.getString("E-mail"));
+					fabricante.setTelContato(rs.getLong("TelContato"));
+					fabricante.setEmail(rs.getString("Email"));
 					
 					}
 			}
@@ -117,7 +117,7 @@ public class FabricanteDAO {
 	
 	
 	public void altera(Fabricante fabricante){
-		String sql = "update fabricantesd set Nome=?, CNPJ=?, Telefoneo=?, E-mail=? where id=?";
+		String sql = "update fabricantesd set Nome=?, CNPJ=?, TelContato=?, Email=? where id=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
@@ -125,7 +125,7 @@ public class FabricanteDAO {
 			stmt.setInt(1, fabricante.getId());
 			stmt.setString(2, fabricante.getNome());
 			stmt.setString(3, fabricante.getCnpj());
-			stmt.setLong(3, fabricante.getTelefone());
+			stmt.setLong(3, fabricante.getTelContato());
 			stmt.setString(3, fabricante.getEmail());
 			
 				

@@ -12,33 +12,29 @@
 <body>
 	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
-	Alterar usuario: ${usuario.id}	
+	Alterar fabricante: ${fabricante.id}	
 	<br />
 	<br />
 	
-	<form action="alteraUsuario" method="post" class="form-horizontal">
+	<form action="alteraFabricante" method="post" class="form-horizontal">
 	
-	<input type="hidden" name="id" value="${usuario.id}" />
+	<input type="hidden" name="id" value="${ fabricante.id}" />
 				
 	<label for="Nome">Nome</label>  
-	<input type="text" name="nome" value="${usuario.nome}" > 
-	<form:errors path="usuario.nome" cssStyle="color:#B71C1C"/><br />
+	<input type="text" name="nome" value="${fabricante.nome}" > 
+	<form:errors path="fabricante.nome" cssStyle="color:#B71C1C"/><br />
 
-	<label for="Login">Login</label>  
-	<input type="text" name="login" value="${usuario.login}" >
-	<form:errors path="usuario.login" cssStyle="color:#B71C1C"/><br />
-
-	<label for="Senha">Senha</label>  	
-	<input type="password" name="senha" value="${usuario.senha}">
-	<form:errors path="usuario.senha" cssStyle="color:#B71C1C"/><br />
+	<label for="CNPJ">CNPJ</label>  
+	<input type="text" name="Cnpj" value="${fabricante.cnpj}" > 
+	<form:errors path="usuario.cnpj" cssStyle="color:#B71C1C"/><br />
 	
-	<label for="DataNascimento">Data Nascimento</label>  
-	<input type="text" name="dataNascimento" value ="<fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" />" > 
-	<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/><br />
+	<label for="TelContato">TelContato</label>  
+	<input type="text" name="TelContato" value="${fabricante.telContato}" > 
+	<form:errors path="fabricante.telContato" cssStyle="color:#B71C1C"/><br />
 	
-	<label for="Altura">Altura</label>  
-	<input type="text" name="altura" value="${usuario.altura}" >
-	<form:errors path="usuario.altura" cssStyle="color:#B71C1C"/><br />
+	<label for ="E-mail">E-mail</label>
+	<input type="text" name="Email" value="${fabricante.e-mail }">
+	<form:errors path="fabeicante.e-mail" cssStyle="color:#B71C1C"/><br/>
 	
 	<input type="submit" value="Alterar">
 	

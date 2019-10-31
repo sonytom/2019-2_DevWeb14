@@ -9,19 +9,17 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.cadastro.dao.FabricanteDAO;
-import br.com.cadastro.dao.UsuarioDAO;
 import br.com.cadastro.model.Fabricante;
-import br.com.cadastro.model.Usuario;
 
 @Controller
 public class FabricanteController {
 	
     @Autowired
-    FabricanteDAO daofabricante;
+    FabricanteDAO daoFabricante;
     
-	@RequestMapping("listafabricantes")
+	@RequestMapping("listaFabricantes")
     public String lista(Model modelFabricante) throws ClassNotFoundException {
-        modelFabricante.addAttribute("fabricantes", daofabricante.lista());
+        modelFabricante.addAttribute("fabricantes", daoFabricante.lista());
         return "fabricante/lista";
     }
 
@@ -32,32 +30,32 @@ public class FabricanteController {
 	
 	@RequestMapping("adicionaFabricantes")
 	public String adiciona(@Valid Fabricante fabricante, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome") || result.hasFieldErrors("cnpj") || result.hasFieldErrors("telefone") || result.hasFieldErrors("e-mail")) {
+		if(result.hasFieldErrors("nome") || result.hasFieldErrors("id")|| result.hasFieldErrors("Cnpj")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("email") ) {
 			 return "fabricante/insere";
 	     }
-		daofabricante.adiciona(fabricante);
+		daoFabricante.adiciona(fabricante);
 		return "redirect:listaFabricantes";
 	}
 	
 	@RequestMapping("editaFabricantes")
     public String edita(int id, Model modelFabricante) throws ClassNotFoundException {
-        modelFabricante.addAttribute("usuario", daofabricante.buscaPorId(id));
-        return "usuario/edita";
+        modelFabricante.addAttribute("fabricante", daoFabricante.buscaPorId(id));
+        return "fabricante/edita";
     }
 	
-	@RequestMapping("alteraFabricantes")
+	@RequestMapping("alteraFabricante")
 	public String altera(@Valid Fabricante fabricante, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome") || result.hasFieldErrors("cnpj") || result.hasFieldErrors("telefone") || result.hasFieldErrors("e-mail")) {
+		if(result.hasFieldErrors("nome") || result.hasFieldErrors("id")|| result.hasFieldErrors("cnpj")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("email")) {
 			 return "fabricante/edita";
 	     }
-		daofabricante.altera(fabricante);
+		daoFabricante.altera(fabricante);
         return "redirect:listaFabricantes";
     }
 	
-    @RequestMapping("removeFabricante")
+    @RequestMapping("removeFabricantes")
     public String remove(Fabricante fabricante) throws ClassNotFoundException {
-    	daofabricante.remove(fabricante);
-        return "redirect:listaFabricantes";
+    	daoFabricante.remove(fabricante);
+        return "redirect:listafabricantes";
     }
     
 }

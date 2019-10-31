@@ -1,12 +1,5 @@
 package br.com.cadastro.model;
 
-import java.util.Calendar;
-
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
 public class Fabricante {
 	
 	public int getId() {
@@ -27,11 +20,11 @@ public class Fabricante {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	public Long getTelefone() {
-		return telefone;
+	public Long getTelContato() {
+		return TelContato;
 	}
-	public void setTelefone(Long telefone) {
-		this.telefone = telefone;
+	public void setTelContato(Long TelContato) {
+		this.TelContato = TelContato;
 	}
 	public String getEmail() {
 		return email;
@@ -42,7 +35,7 @@ public class Fabricante {
 	private int id;	
 	private String nome;
 	private String cnpj;
-	private Long telefone;
+	private Long TelContato;
 	private String email;
 	
 	

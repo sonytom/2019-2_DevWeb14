@@ -13,30 +13,27 @@
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 <br />
 	
-	Cadastro de Usuarios <br /><br />
+	Cadastro de Fornecedores <br /><br />
 	
-	<form action="adicionaUsuario" method="post">
-				<label for="Nome">Nome</label>  
-				<input type="text" name="nome" value="${usuario.nome}" >
-				<form:errors path="usuario.nome" cssStyle="color:#B71C1C"/><br />
-	
-				<label for="Login">Login</label>  
-				<input type="text" name="login" value="${usuario.login}" >
-				<form:errors path="usuario.login" cssStyle="color:#B71C1C"/><br />
-	
-				<label for="Senha">Senha</label>  
-				<input type="password" name="senha" value="${usuario.senha}">
-				<form:errors path="usuario.senha" cssStyle="color:#B71C1C"/><br />
+	<form action="adicinaFornecedor" method="post">
 				
-				<label for="DataNascimento">Data Nascimento</label>  
-				<input type="text" name="dataNascimento" value ="<fmt:formatDate value="${dataNascimento}" pattern="dd/MM/yyyy" />">
-				<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/><br />
+	<label for="Nome">Nome</label>  
+	<input type="text" name="nome" value="${fornecedor.nome}" > 
+	<form:errors path="fornecedor.nome" cssStyle="color:#B71C1C"/><br />
+
+	<label for="CNPJ">CNPJ</label>  
+	<input type="text" name="Cnpj" value="${fornecedor.cnpj}" > 
+	<form:errors path="fornecedor.cnpj" cssStyle="color:#B71C1C"/><br />
 	
-				<label for="Altura">Altura</label>  
-				<input type="text" name="altura" value="${usuario.altura}" >
-				<form:errors path="usuario.altura" cssStyle="color:#B71C1C"/><br />
-		
-				<input type="submit" value="Criar">
+	<label for="TelContato">TelContato</label>  
+	<input type="text" name="TelContato" value="${fornecedor.telContato}" > 
+	<form:errors path="fornecedor.telContato" cssStyle="color:#B71C1C"/><br />
+	
+	<label for ="Email">Email</label>
+	<input type="text" name="Email" value="${fornecedor.email }">
+	<form:errors path="fornecedor.email" cssStyle="color:#B71C1C"/><br/>
+				
+	<input type="submit" value="Criar">
 		
 	</form>
 </body>

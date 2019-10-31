@@ -1,12 +1,5 @@
 package br.com.cadastro.model;
 
-import java.util.Calendar;
-
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
 public class Cadastro {
 	private Long id;
 	public Long getId() {

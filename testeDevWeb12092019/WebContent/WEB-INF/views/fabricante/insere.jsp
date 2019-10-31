@@ -13,29 +13,28 @@
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 <br />
 	
-	Cadastro de Usuarios <br /><br />
+	Cadastro de Fabricates <br /><br />
 	
-	<form action="adicionaUsuario" method="post">
+	<form action="adicionaFabricante" method="post">
 				<label for="Nome">Nome</label>  
-				<input type="text" name="nome" value="${usuario.nome}" >
-				<form:errors path="usuario.nome" cssStyle="color:#B71C1C"/><br />
+				<input type="text" name="nome" value="${fabricante.nome}" >
+				<form:errors path="fabricante.nome" cssStyle="color:#B71C1C"/><br />
+
 	
-				<label for="Login">Login</label>  
-				<input type="text" name="login" value="${usuario.login}" >
-				<form:errors path="usuario.login" cssStyle="color:#B71C1C"/><br />
-	
-				<label for="Senha">Senha</label>  
-				<input type="password" name="senha" value="${usuario.senha}">
-				<form:errors path="usuario.senha" cssStyle="color:#B71C1C"/><br />
+				<label for="CNPJ">CNPJ</label>  
+				<input type="text" name="cnpj" value="${fabricante.cpf}" > 
+				<form:errors path="fabricante.cpf" cssStyle="color:#B71C1C"/><br />
 				
-				<label for="DataNascimento">Data Nascimento</label>  
-				<input type="text" name="dataNascimento" value ="<fmt:formatDate value="${dataNascimento}" pattern="dd/MM/yyyy" />">
-				<form:errors path="usuario.dataNascimento" cssStyle="color:#B71C1C"/><br />
-	
-				<label for="Altura">Altura</label>  
-				<input type="text" name="altura" value="${usuario.altura}" >
-				<form:errors path="usuario.altura" cssStyle="color:#B71C1C"/><br />
-		
+				<label for="TelContato">TelContato</label>  
+				<input type="text" name="TelContato" value="${usuario.TelContato}" > 
+				<form:errors path="usuario.telContato" cssStyle="color:#B71C1C"/><br />
+				
+				<label for="Enail">Email</label>  
+				<input type="text" name="Email" value="${fabricante.Email}" > 
+				<form:errors path="fabricante.email" cssStyle="color:#B71C1C"/><br />
+				
+							
+				
 				<input type="submit" value="Criar">
 		
 	</form>

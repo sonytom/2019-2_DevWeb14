@@ -11,28 +11,28 @@
 <body>
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
-	<a href="novoUsuario">Cadastrar novo fornecedor</a>
+	<a href="novoFornecedor">Cadastrar novo fornecedor</a>
 	<br />
 	<br />
 	<table>
 		<tr>
 			<th>Id</th>
 			<th>Nome</th>
-			<th>Login</th>
-			<th>Data de Nascimento</th>
-			<th>Altura</th>
+			<th>CNPJ</th>
+			<th>TelContato</th>
+			<th>E-mail</th>
 			<th></th>
 			<th></th>
 		</tr>
-		<c:forEach items="${usuarios}" var="usuario">
+		<c:forEach items="${fornecedor}" var="fornecedor">
 			<tr>
-				<td>${usuario.id}</td>
-				<td>${usuario.nome}</td>
-				<td>${usuario.login}</td>
-				<td><fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
-				<td>${usuario.altura}</td>
-				<td><a href="editaUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
-				<td><a href="removeUsuario?id=${usuario.id}" title="Excluir">Excluir</a></td>
+				<td>${fornecedor.id}</td>
+				<td>${fornecedor.nome}</td>
+				<td>${fornecedor.cnpj}</td>
+				<td>${fornecedor.telContato}</td>
+				<td>${fornecedor.email}</td>
+				<td><a href="editaFornecedor?id=${fornecedor.id}" title="Editar">Editar</a></td>
+				<td><a href="removeFornecedor?id=${fornecedor.id}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
