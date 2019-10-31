@@ -49,8 +49,8 @@
 				<td>${produto.qtdLote}</td>
 				<td>${produto.precoqtd}</td>
 				
-				<td><a href="editaProduto?id=${produto.idproduto}" title="Editar">Editar</a></td>
-				<td><a href="removeProduto?id=${produto.idproduto}" title="Excluir">Excluir</a></td>
+				<td><a href="editaProduto?idproduto=${produto.idproduto}" title="Editar">Editar</a></td>
+				<td><a href="removeProduto?idproduto=${produto.idproduto}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>
