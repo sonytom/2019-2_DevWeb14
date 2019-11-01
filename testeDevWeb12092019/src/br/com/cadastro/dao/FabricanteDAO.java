@@ -61,6 +61,7 @@ public class FabricanteDAO {
 				fabricante.setCnpj(rs.getString("CNPJ"));
 				fabricante.setTelContato(rs.getLong("TelContato"));
 				fabricante.setEmail(rs.getString("Email"));
+				fabricantes.add(fabricante);
 				}
 				
 			

@@ -30,7 +30,7 @@ public class FornecedorController {
 	
 	@RequestMapping("adicionaFornecedores")
 	public String adiciona(@Valid Fornecedor fornecedor, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome") || result.hasFieldErrors("cnpj") || result.hasFieldErrors("TelContato") || result.hasFieldErrors("email")) {
+		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome") || result.hasFieldErrors("cnpj") || result.hasFieldErrors("TelContato") || result.hasFieldErrors("Email")) {
 			 return "fornecedor/insere";
 	     }
 		daoFornecedor.adiciona(fornecedor);
@@ -45,7 +45,7 @@ public class FornecedorController {
 	
 	@RequestMapping("alteraFornecedor")
 	public String altera(@Valid Fornecedor fornecedor, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome") || result.hasFieldErrors("cnpj") || result.hasFieldErrors("TelContato") || result.hasFieldErrors("email")) {
+		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome") || result.hasFieldErrors("cnpj") || result.hasFieldErrors("TelContato") || result.hasFieldErrors("Email")) {
 			 return "fornecedor/edita";
 	     }
 		daoFornecedor.altera(fornecedor);

@@ -28,16 +28,16 @@ public class FornecedorDAO {
 	}
 	
 	public void adiciona(Fornecedor fornecedor){
-		String sql = "insert into fornecedores (id, nome , cnpj, telefone, e-mail) " +
-					"values (?, ?, MD5(?), ?, ?)";
+		String sql = "insert into fornecedores (id, nome , cnpj, TelContato, Email) " +
+					"values (?, ?, ?, ?, ?)";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			stmt.setInt(1, fornecedor.getId());
 			stmt.setString(2, fornecedor.getNome());
 			stmt.setString(3, fornecedor.getCnpj());
-			stmt.setLong(3, fornecedor.gettelContato());
-			stmt.setString(3, fornecedor.getEmail());
+			stmt.setLong(4, fornecedor.gettelContato());
+			stmt.setString(5, fornecedor.getEmail());
 			
 			
 			stmt.execute();
@@ -61,8 +61,9 @@ public class FornecedorDAO {
 				fornecedor.setId(rs.getInt("id"));
 				fornecedor.setNome(rs.getString("nome"));
 				fornecedor.setCnpj(rs.getString("CNPJ"));
-				fornecedor.settelContato(rs.getLong("Telefone"));
-				fornecedor.setEmail(rs.getString("E-mail"));
+				fornecedor.settelContato(rs.getLong("TelContato"));
+				fornecedor.setEmail(rs.getString("Email"));
+				fornecedores.add(fornecedor);
 				}
 				
 			
@@ -93,7 +94,7 @@ public class FornecedorDAO {
 	public Fornecedor buscaPorId(int id){
 		
 		try{
-			PreparedStatement stmt = this.connection.prepareStatement("select * from usuarios");
+			PreparedStatement stmt = this.connection.prepareStatement("select * from fornecedores");
 			ResultSet rs = stmt.executeQuery();
 			
 			while(rs.next())
@@ -106,9 +107,9 @@ public class FornecedorDAO {
 					fornecedor.setId(rs.getInt("id"));
 					fornecedor.setNome(rs.getString("nome"));
 					fornecedor.setCnpj(rs.getString("CNPJ"));
-					fornecedor.settelContato(rs.getLong("Telefone"));
-					fornecedor.setEmail(rs.getString("E-mail"));
-					
+					fornecedor.settelContato(rs.getLong("TelContato"));
+					fornecedor.setEmail(rs.getString("Email"));
+					return fornecedor;
 					}
 			}
 				return null;
@@ -119,16 +120,17 @@ public class FornecedorDAO {
 	
 	
 	public void altera(Fornecedor fornecedor){
-		String sql = "update fornecedores set Nome=?, CNPJ=?, Telefoneo=?, E-mail=? where id=?";
+		String sql = "update fornecedores set Nome=?, CNPJ=?, TelContato=?, Email=? where id=?";
 		
 		try{
 			PreparedStatement stmt = this.connection.prepareStatement(sql);
 			
-			stmt.setInt(1, fornecedor.getId());
-			stmt.setString(2, fornecedor.getNome());
-			stmt.setString(3, fornecedor.getCnpj());
+			
+			stmt.setString(1, fornecedor.getNome());
+			stmt.setString(2, fornecedor.getCnpj());
 			stmt.setLong(3, fornecedor.gettelContato());
-			stmt.setString(3, fornecedor.getEmail());
+			stmt.setString(4, fornecedor.getEmail());
+			stmt.setInt(5, fornecedor.getId());
 			
 				
 			stmt.execute();

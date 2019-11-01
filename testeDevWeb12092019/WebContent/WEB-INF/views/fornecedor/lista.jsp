@@ -24,14 +24,14 @@
 			<th></th>
 			<th></th>
 		</tr>
-		<c:forEach items="${fornecedor}" var="fornecedor">
+		<c:forEach items="${fornecedores}" var="fornecedor">
 			<tr>
 				<td>${fornecedor.id}</td>
 				<td>${fornecedor.nome}</td>
 				<td>${fornecedor.cnpj}</td>
 				<td>${fornecedor.telContato}</td>
 				<td>${fornecedor.email}</td>
-				<td><a href="editaFornecedor?id=${fornecedor.id}" title="Editar">Editar</a></td>
+				<td><a href="editaFornecedores?id=${fornecedor.id}" title="Editar">Editar</a></td>
 				<td><a href="removeFornecedor?id=${fornecedor.id}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>

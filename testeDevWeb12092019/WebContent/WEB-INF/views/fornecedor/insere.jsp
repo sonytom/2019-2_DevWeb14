@@ -15,7 +15,7 @@
 	
 	Cadastro de Fornecedores <br /><br />
 	
-	<form action="adicinaFornecedor" method="post">
+	<form action="adicionaFornecedores" method="post">
 				
 	<label for="Nome">Nome</label>  
 	<input type="text" name="nome" value="${fornecedor.nome}" > 
