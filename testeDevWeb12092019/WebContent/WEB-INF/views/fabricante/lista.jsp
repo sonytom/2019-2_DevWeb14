@@ -21,16 +21,18 @@
 			<th>CNPJ</th>
 			<th>TelContato</th>
 			<th>E-mail</th>
+			<th></th>
+			<th></th>
 		</tr>
 		<c:forEach items="${fabricantes}" var="fabricante">
 			<tr>
-				<td>${usuario.id}</td>
-				<td>${usuario.nome}</td>
-				<td>${usuario.cnpj}</td>
-				<td>${usuario.TelContato}</td>
-				<td>${usuario.e-mail}</td>
-				<td><a href="editafabricante?id=${fabricante.id}" title="Editar">Editar</a></td>
-				<td><a href="removefabricante?id=${fabricante.id}" title="Excluir">Excluir</a></td>
+				<td>${fabricante.id}</td>
+				<td>${fabricante.nome}</td>
+				<td>${fabricante.cnpj}</td>
+				<td>${fabricante.telContato}</td>
+				<td>${fabricante.email}</td>
+				<td><a href="editaFabricantes?id=${fabricante.id}" title="Editar">Editar</a></td>
+				<td><a href="removeFabricante?id=${fabricante.id}" title="Excluir">Excluir</a></td>
 			</tr>
 		</c:forEach>
 	</table>

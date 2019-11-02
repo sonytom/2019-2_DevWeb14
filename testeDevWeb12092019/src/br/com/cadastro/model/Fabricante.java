@@ -20,11 +20,11 @@ public class Fabricante {
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-	public Long getTelContato() {
-		return TelContato;
+	public Long gettelContato() {
+		return telContato;
 	}
-	public void setTelContato(Long TelContato) {
-		this.TelContato = TelContato;
+	public void setTelContato(Long telContato) {
+		this.telContato = telContato;
 	}
 	public String getEmail() {
 		return email;
@@ -35,7 +35,7 @@ public class Fabricante {
 	private int id;	
 	private String nome;
 	private String cnpj;
-	private Long TelContato;
+	private Long telContato;
 	private String email;
 	
 	

@@ -30,7 +30,7 @@ public class FabricanteController {
 	
 	@RequestMapping("adicionaFabricantes")
 	public String adiciona(@Valid Fabricante fabricante, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("nome") || result.hasFieldErrors("id")|| result.hasFieldErrors("Cnpj")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("email") ) {
+		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome")|| result.hasFieldErrors("Cnpj")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("Email") ) {
 			 return "fabricante/insere";
 	     }
 		daoFabricante.adiciona(fabricante);
@@ -45,17 +45,17 @@ public class FabricanteController {
 	
 	@RequestMapping("alteraFabricante")
 	public String altera(@Valid Fabricante fabricante, BindingResult result) throws ClassNotFoundException {
-		if(result.hasFieldErrors("nome") || result.hasFieldErrors("id")|| result.hasFieldErrors("cnpj")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("email")) {
+		if(result.hasFieldErrors("id") || result.hasFieldErrors("nome")|| result.hasFieldErrors("cnpj")|| result.hasFieldErrors("telContato")|| result.hasFieldErrors("Email")) {
 			 return "fabricante/edita";
 	     }
 		daoFabricante.altera(fabricante);
         return "redirect:listaFabricantes";
     }
 	
-    @RequestMapping("removeFabricantes")
+    @RequestMapping("removeFabricante")
     public String remove(Fabricante fabricante) throws ClassNotFoundException {
     	daoFabricante.remove(fabricante);
-        return "redirect:listafabricantes";
+        return "redirect:listaFabricantes";
     }
     
 }

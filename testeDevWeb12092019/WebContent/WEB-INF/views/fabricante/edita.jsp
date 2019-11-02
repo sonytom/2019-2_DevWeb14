@@ -18,7 +18,7 @@
 	
 	<form action="alteraFabricante" method="post" class="form-horizontal">
 	
-	<input type="hidden" name="id" value="${ fabricante.id}" />
+	<input type="hidden" name="id" value="${fabricante.id}" />
 				
 	<label for="Nome">Nome</label>  
 	<input type="text" name="nome" value="${fabricante.nome}" > 
@@ -26,15 +26,15 @@
 
 	<label for="CNPJ">CNPJ</label>  
 	<input type="text" name="Cnpj" value="${fabricante.cnpj}" > 
-	<form:errors path="usuario.cnpj" cssStyle="color:#B71C1C"/><br />
+	<form:errors path="fabricante.cnpj" cssStyle="color:#B71C1C"/><br />
 	
 	<label for="TelContato">TelContato</label>  
 	<input type="text" name="TelContato" value="${fabricante.telContato}" > 
 	<form:errors path="fabricante.telContato" cssStyle="color:#B71C1C"/><br />
 	
-	<label for ="E-mail">E-mail</label>
-	<input type="text" name="Email" value="${fabricante.e-mail }">
-	<form:errors path="fabeicante.e-mail" cssStyle="color:#B71C1C"/><br/>
+	<label for ="Email">Email</label>
+	<input type="text" name="Email" value="${fabricante.email }">
+	<form:errors path="fabeicante.email" cssStyle="color:#B71C1C"/><br/>
 	
 	<input type="submit" value="Alterar">
 	
