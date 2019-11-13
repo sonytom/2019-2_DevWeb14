@@ -11,39 +11,10 @@
 <body>
 <c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
-	<a href="novoUsuario">Cadastrar novo usuario</a>
+	
 	<br />
 	<br />
-	<table>
-		<tr>
-			<th>Id</th>
-			<th>Nome</th>
-			<th>Login</th>
-			<th>Data de Nascimento</th>
-			<th>RG</th>
-			<th>CPF</th>
-			<th>TelContato</th>
-			<th>Endereço</th>
-			<th></th>
-			<th></th>
-		</tr>
-		<c:forEach items="${usuarios}" var="usuario">
-			<tr>
-				<td>${usuario.id}</td>
-				<td>${usuario.nome}</td>
-				<td>${usuario.login}</td>
-				<td><fmt:formatDate value="${usuario.dataNascimento.time}" pattern="dd/MM/yyyy" /></td>
-				<td>${usuario.rg}</td>
-				<td>${usuario.cpf}</td>
-				<td>${usuario.telContato}</td>
-				<td>${usuario.endereco}</td>
-				<td><a href="editaUsuario?id=${usuario.id}" title="Editar">Editar</a></td>
-				<td><a href="removeUsuario?id=${usuario.id}" title="Excluir">Excluir</a></td>
-			</tr>
-		</c:forEach>
-	</table>
-</body>
-</html>
+
 
 
 <!--
@@ -67,14 +38,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <!-- Global Stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate/animate.min.css">
-    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/animate/animate.min.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/style.css">
     
     <!-- Core Stylesheets -->
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/shop.css">
   </head>
 
   <body id="page-top">
@@ -93,23 +64,29 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 ======================================================-->
     <div id="home-p" class="home-p pages-head3 text-center">
       <div class="container">
-        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Shoping Box</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Usuarios</h1>
       </div><!--/end container-->
     </div> 
 
 <!--====================================================
                         CART
 ======================================================-->
-    <section id="cart" class="cart">
+    
       <div class="container">
         <table id="cart" class="table table-hover table-condensed">
           <thead>
             <tr>
-              <th style="width:50%">Product</th>
-              <th style="width:10%">Price</th>
-              <th style="width:8%">Quantity</th>
-              <th style="width:22%" class="text-center">Subtotal</th>
-              <th style="width:10%"></th>
+              <th style="width:50%">id</th>
+              <th style="width:10%">Nome</th>
+              <th style="width:8%">Login</th>
+              <th style="width:22%" class="text-center">Data de Nascimento</th>
+              <th style="width:8%">RG</th>
+              <th style="width:8%">CPF</th>
+              <th style="width:8%">Telefone</th>
+              <th style="width:8%">Endereco</th>
+              
+              <th style="width:8%">Editar</th>
+              <th style="width:8%">Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -133,7 +110,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 		</c:forEach>
             
             
-               
+               <div class="col-md-12 float-left eigth-button mt-5">
+                    <a href="novoUsuario" class="btn float-left  btn-21">Novo Usuario</a> 
+                </div><br>
           
      
            
@@ -141,20 +120,20 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           
         </table>
       </div>
-    </section>
+   
 
 
 
     <!--Global JavaScript -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/wow/wow.min.js"></script>
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/js/jquery/jquery.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/js/popper/popper.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/js/wow/wow.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/js/owl-carousel/owl.carousel.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="js/jquery-easing/jquery.easing.min.js"></script> 
-    <script src="js/custom.js"></script> 
+    <script src="/testeDevWeb12092019/resources/js/jquery-easing/jquery.easing.min.js"></script> 
+    <script src="/testeDevWeb12092019/resources/js/custom.js"></script> 
   </body>
 
 </html>

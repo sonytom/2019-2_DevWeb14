@@ -1,12 +1,3 @@
-
-<a href="listaUsuarios">Usuarios</a> | 
-<a href="listaProdutos">Produtos</a> | 
-<a href="listaFornecedores">Fornecedor</a>| 
-<a href="listaFabricantes">Fabricante</a> | 
-<a href="logout">Sair</a>
-<br /> 
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
@@ -31,12 +22,18 @@
     <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/style.css">
+    
+     <!-- global stylesheets admin -->
+
+
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="/testeDevWeb12092019/resources/admin/css/ui-elements/button.css">
   </head>
 
  <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
         <div class="container">
-          <a class="navbar-brand smooth-scroll" href="index.html">
+          <a class="navbar-brand smooth-scroll" href="listaPrincipal">
             <img src="/testeDevWeb12092019/resources/img/logo-s.png" alt="logo">
           </a> 
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
@@ -51,6 +48,8 @@
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink"> 
                     <a class="dropdown-item"  target="_empty" href="listaUsuarios">Usuarios</a> 
                     <a class="dropdown-item"  target="_empty" href="listaProdutos">Produtos</a> 
+                     <a class="dropdown-item"  target="_empty" href="listaFornecedores">Fornecedores</a> 
+                      <a class="dropdown-item"  target="_empty" href="listaFabricantes">Fabricantes</a> 
                     <a class="dropdown-item"  target="_empty" href="logout">Sair</a> 
                     </div>
                 </li>
@@ -70,6 +69,17 @@
     <script src="/testeDevWeb12092019/resources/js/bootstrap/bootstrap.min.js"></script>
     <script src="/testeDevWeb12092019/resources/js/wow/wow.min.js"></script>
     <script src="/testeDevWeb12092019/resources/js/owl-carousel/owl.carousel.min.js"></script>
+    
+    
+    <!--Global Javascript Admin -->
+    <script src="/testeDevWeb12092019/resources/admin/js/jquery.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/popper/popper.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/tether.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/bootstrap.min.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/jquery.cookie.js"></script>
+    <script src="/testeDevWeb12092019/resources/admin/js/jquery.validate.min.js"></script> 
+    <script src="/testeDevWeb12092019/resources/admin/js/chart.min.js"></script> 
+    <script src="/testeDevWeb12092019/resources/admin/js/front.js"></script> 
 
     <!-- Plugin JavaScript -->
     <script src="/testeDevWeb12092019/resources/js/jquery-easing/jquery.easing.min.js"></script> 

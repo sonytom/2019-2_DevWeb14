@@ -1,10 +1,3 @@
-<a href="listaPrincipal">Home</a> | 
-<a href="listaUsuarios">Usuarios</a> | 
-<a href="listaProdutos">Produtos</a> | 
-<a href="logout">Sair</a>
-<br /> 
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <!--
@@ -60,43 +53,15 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 <div class="col-md-3 col-sm-6 ">
                   <div><img src="img/logo-w.png" alt="" class="img-fluid"></div>
                   <ul class="list-unstyled comp-desc-f">
-                     <li><p>Businessbox is a corporate business theme. You can customize what ever you think to make your website much better from your great ideas. </p></li> 
-                  </ul><br> 
+                     <li><p>Estabelecer laços de confiança com nossos clientes, garantindo principalmente sua plena satisfação; comercializar produtos com preços acessíveis e oferecer sempre qualidade em nosso atendimento.
                 </div>
                 <!-- End About Us -->
 
                 <!-- Recent News -->
-                <div class="col-md-3 col-sm-6 ">
-                  <div class="heading-footer"><h2>Useful Links</h2></div>
-                  <ul class="list-unstyled link-list">
-                    <li><a href="about.html">About us</a><i class="fa fa-angle-right"></i></li> 
-                    <li><a href="project.html">Project</a><i class="fa fa-angle-right"></i></li> 
-                    <li><a href="careers.html">Career</a><i class="fa fa-angle-right"></i></li> 
-                    <li><a href="faq.html">FAQ</a><i class="fa fa-angle-right"></i></li> 
-                    <li><a href="contact.html">Contact us</a><i class="fa fa-angle-right"></i></li> 
-                  </ul>
-                </div>
+               
                 <!-- End Recent list -->
 
-                <!-- Recent Blog Entries -->
-                <div class="col-md-3 col-sm-6 ">
-                  <div class="heading-footer"><h2>Recent Post Entries</h2></div>
-                  <ul class="list-unstyled thumb-list">
-                    <li>
-                      <div class="overflow-h">
-                        <a href="#">Praesent ut consectetur diam.</a>
-                        <small>02 OCT, 2017</small>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="overflow-h">
-                        <a href="#">Maecenas pharetra tellus et fringilla.</a>
-                        <small>02 OCT, 2017</small>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <!-- End Recent Blog Entries -->
+            
 
                 <!-- Latest Tweets -->
                 <div class="col-md-3 col-sm-6">
@@ -125,7 +90,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 <div class="row">
                     <div class="col-md-12">
                         <div id="footer-copyrights">
-                            <p>Copyrights &copy; 220 All Rights Reserved by Businessbox. <a href="#">Privacy Policy</a> <a href="#">Terms of Services</a></p>
+                            <p>Copyrights &copy; 2019 All Rights Reserved by TomFich. <a href="#">Privacy Policy</a> <a href="#">Terms of Services</a></p>
                         </div>
                     </div> 
                 </div>

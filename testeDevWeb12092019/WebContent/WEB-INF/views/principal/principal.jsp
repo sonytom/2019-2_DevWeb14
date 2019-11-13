@@ -57,9 +57,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
               <div class="slide-1"></div>
                 <div class="hero ">
                   <hgroup class="wow fadeInUp">
-                      <h1>We Help <span ><a href="" class="typewrite" data-period="2000" data-type='[ " Business", " Startup"]'>
-                        <span class="wrap"></span></a></span> </h1>        
-                      <h3>The next big idea is waiting for its next big changer</h3>
+                      <h2>Como Podemos ajudar voce<span ><a href="" class="typewrite" data-period="2000" data-type='[ " Remedios?", " Perfumaria?"," Musculacao?"]'>
+                        <span class="wrap"></span></a></span> </h2>        
+                      <h6>Compromisso com sua saude!</h6>
                   </hgroup>
                   </div>           
             </div> 
@@ -77,52 +77,52 @@ License URL: https://creativecommons.org/licenses/by/4.0/
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <h3>What we Do</h3>
+            <h3>Descontos nos Maiores laboratorios</h3>
             <div class="heading-border-light"></div> 
-            <p class="desc">We partner with clients to put recommendations into practice. </p>
+            <p class="desc">Aqui voce Cuida da sua saude gastando pouco</p>
           </div>
           <div class="col-md-9">
             <div class="row">
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-briefcase"></i>
-                  <h6>Workspace</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>Ache</h6>
+                  <p class="desc">Cuidados pela Vida</p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-shopping-bag"></i>
-                  <h6>Storefront</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>Novartis</h6>
+                  <p class="desc">Vale Mais Saude</p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-building-o"></i>
-                  <h6>Apartments</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>Bayer</h6>
+                  <p class="desc">Conexao Saude</p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-bed"></i>
-                  <h6>Hotels</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>Mantecorp</h6>
+                  <p class="desc">Vida Mais</p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-hourglass-2"></i>
-                  <h6>Concept</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>AstraZeneca</h6>
+                  <p class="desc">Faz Bem</p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-cutlery"></i>
-                  <h6>Restaurant</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>Pfizer</h6>
+                  <p class="desc">Mais Pfizer</p>
                 </div>
               </div>
             </div>
@@ -139,9 +139,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
       <div class="container">
         <div class="row title-bar">
           <div class="col-md-12">
-            <h1 class="wow fadeInUp">Our Client Say</h1>
+            <h1 class="wow fadeInUp">Opnioes dos Clientes</h1>
             <div class="heading-border"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">We committed to helping you maintain your Brand Value.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.4s">Temos o compromisso de ajuda-lo na tranparencia de nossa farmacia.</p>
           </div>
         </div>
         <div class="row">
@@ -149,18 +149,16 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             <div class="client-cont wow fadeInUp" data-wow-delay="0.1s">
               <img src="img/client/avatar-6.jpg" class="img-fluid" alt="">
               <h5>Leesa len</h5>
-              <h6>DSS CEO & Cofounder</h6>
               <i class="fa fa-quote-left"></i>
-              <p>The Businessbox service - it helps fill our Business, and increase our show up rate every single time.</p>
+              <p>Produto pratico e de grande utilidade. Funcionou perfeitamente</p>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="client-cont wow fadeInUp" data-wow-delay="0.3s">
               <img src="img/client/avatar-2.jpg" class="img-fluid" alt="">
               <h5>Dec Bol</h5>
-              <h6>TEMS founder</h6>
               <i class="fa fa-quote-left"></i>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece.</p>
+              <p>Funcionou como o esperado.</p>
             </div>
           </div>
         </div>
