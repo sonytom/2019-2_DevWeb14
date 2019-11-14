@@ -169,3 +169,4 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 </body>
 
 </html>
+<c:import url="/WEB-INF/views/principal/footer.jsp"/>

@@ -12,7 +12,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
   <head>
 
-    <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -30,20 +30,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <link rel="stylesheet" href="/testeDevWeb12092019/resources/css/style.css">
   </head>
 
-  <body id="page-top">
+ 
 
-<!--====================================================
-                         HEADER
-======================================================--> 
 
-    <header>
-
-    
-    
-
-<!--====================================================
-                      FOOTER
-======================================================--> 
     <footer> 
         <div id="footer-s1" class="footer-s1">
           <div class="footer">
@@ -54,18 +43,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                   <div><img src="img/logo-w.png" alt="" class="img-fluid"></div>
                   <ul class="list-unstyled comp-desc-f">
                      <li><p>Estabelecer laços de confiança com nossos clientes, garantindo principalmente sua plena satisfação; comercializar produtos com preços acessíveis e oferecer sempre qualidade em nosso atendimento.
+                </ul>
                 </div>
-                <!-- End About Us -->
+                
 
-                <!-- Recent News -->
-               
-                <!-- End Recent list -->
-
-            
-
-                <!-- Latest Tweets -->
                 <div class="col-md-3 col-sm-6">
-                  <div class="heading-footer"><h2>Get In Touch</h2></div>
+                  <div class="heading-footer"><h2></h2></div>
                   <address class="address-details-f">
                     25, Dist town Street, Logn <br>
                     California, US <br>
@@ -96,9 +79,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 </div>
             </div>
         </div>
-        <a href="#home" id="back-to-top" class="btn btn-sm btn-green btn-back-to-top smooth-scrolls hidden-sm hidden-xs" title="home" role="button">
-            <i class="fa fa-angle-up"></i>
-        </a>
+       
     </footer>
 
     <!--Global JavaScript -->
