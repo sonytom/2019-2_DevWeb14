@@ -13,32 +13,43 @@
 	<c:import url="/WEB-INF/views/principal/menu.jsp"/>
 	<br />
 	Alterar fabricante: ${fabricante.id}	
-	<br />
-	<br />
-	
+	 <div class="content-inner chart-cont">
+         <!--***** FORM LAYOUTS *****-->     
+         <div class="row">
+            <div class="col-md-12">
+               <!--***** USER INFO *****-->
+               <div class="card form" id="form1">
+                  <div class="card-header">
+                     <h3><i class="fa fa-user-circle"></i>Cadastro do Fornecedor</h3>
+                  </div>
+                  <br>
 	<form action="alteraFabricante" method="post" class="form-horizontal">
 	
 	<input type="hidden" name="id" value="${fabricante.id}" />
 				
 	<label for="Nome">Nome</label>  
-	<input type="text" name="nome" value="${fabricante.nome}" > 
+	<input type="text" class="form-control" name="nome" value="${fabricante.nome}" > 
 	<form:errors path="fabricante.nome" cssStyle="color:#B71C1C"/><br />
 
 	<label for="CNPJ">CNPJ</label>  
-	<input type="text" name="Cnpj" value="${fabricante.cnpj}" > 
+	<input type="text"  class="form-control" name="Cnpj" value="${fabricante.cnpj}" > 
 	<form:errors path="fabricante.cnpj" cssStyle="color:#B71C1C"/><br />
 	
 	<label for="TelContato">TelContato</label>  
-	<input type="text" name="TelContato" value="${fabricante.telContato}" > 
+	<input type="text" class="form-control"  name="TelContato" value="${fabricante.telContato}" > 
 	<form:errors path="fabricante.telContato" cssStyle="color:#B71C1C"/><br />
 	
 	<label for ="Email">Email</label>
-	<input type="text" name="Email" value="${fabricante.email }">
+	<input type="text"  class="form-control" class="form-control"  name="Email" value="${fabricante.email }">
 	<form:errors path="fabeicante.email" cssStyle="color:#B71C1C"/><br/>
 	
-	<input type="submit" value="Alterar">
-	
+	<button type="submit" class="btn btn-general btn-blue mr-2">Alterar</button>  
+                     <a href="listaPrincipal" class="btn   btn-21">Voltar</a> 
 	</form>
+	</div>
+	</div>
+	</div>
+	</div>
 	
 </body>
 </html>
