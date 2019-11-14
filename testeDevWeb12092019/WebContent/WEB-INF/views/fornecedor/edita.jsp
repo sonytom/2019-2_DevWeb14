@@ -21,7 +21,7 @@
                <!--***** USER INFO *****-->
                <div class="card form" id="form1">
                   <div class="card-header">
-                     <h3><i class="fa fa-user-circle"></i>Cadastro do Usuario</h3>
+                     <h3><i class="fa fa-user-circle"></i>Cadastro do Fornecedor</h3>
                   </div>
                   <br>
                   <form action="alteraFornecedor" method="post" class="form-horizontal">
@@ -51,3 +51,4 @@
       </div>
    </body>
 </html>
+<c:import url="/WEB-INF/views/principal/footer.jsp"/>

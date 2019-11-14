@@ -67,7 +67,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         <table id="cart" class="table table-hover table-condensed">
           <thead>
             <tr>
+
                <th style="width:10%">id</th>
+
+            
+
               <th style="width:10%">Nome</th>
               <th style="width:8%">cnpj</th>
              <th style="width:8%">Tel Contato</th>
@@ -128,4 +132,6 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
 </html>
 
+
 <c:import url="/WEB-INF/views/principal/footer.jsp"/>
+

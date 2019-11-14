@@ -18,7 +18,7 @@
                <!--***** USER INFO *****-->
                <div class="card form" id="form1">
                   <div class="card-header">
-                     <h3><i class="fa fa-user-circle"></i>Cadastro do Usuario</h3>
+                     <h3><i class="fa fa-user-circle"></i>Cadastro do Fornecedor</h3>
                   </div>
                   <br>
                   <form action="adicionaFornecedores" method="post">
@@ -38,7 +38,9 @@
                      <input type="text"  class="form-control"  name="Email" value="${fornecedor.email }">
                      <form:errors path="fornecedor.email" cssStyle="color:#B71C1C"/>
                      <br/>
-                     <input type="submit" value="Criar">
+                     <button type="submit" class="btn btn-general btn-blue mr-2">Cadastrar</button>  
+                            
+                   <a href="listaPrincipal" class="btn   btn-21">Voltar</a> 
                   </form>
                </div>
             </div>
@@ -46,3 +48,4 @@
       </div>
    </body>
 </html>
+<c:import url="/WEB-INF/views/principal/footer.jsp"/>
